@@ -1,0 +1,57 @@
+[
+  {
+    "id": "001",
+    "title": "ENDLESS_RUNNER",
+    "isSchoolProject": true,
+    "technologies": [
+      "JAVASCRIPT",
+      "EXCALIBUR_JS",
+      "VITE",
+      "CSS"
+    ],
+    "images": [
+      "/images/endless-runner/endless-runner-image.png",
+      "/images/endless-runner/endless-runner-death-image.png"
+    ],
+    "description": {
+      "en": "EXCALIBUR_ENDLESS_RUNNER",
+      "nl": "EXCALIBUR_ENDLESS_RUNNER"
+    },
+    "longDescription": {
+      "en": "An Endless Runner Game I made for school using Excalibur.",
+      "nl": "Een Endless Runner Spel die ik heb gemaakt voor school met Excalibur."
+    },
+    "links": {
+      "live": "#",
+      "source": "https://github.com/cctenshii/prg04-eindopdracht"
+    }
+  },
+  {
+    "id": "002",
+    "title": "BIP_TUTOR_SYSTEM",
+    "isSchoolProject": true,
+    "technologies": [
+      "LARAVEL",
+      "PHP",
+      "TAILWIND_CSS",
+      "MYSQL"
+    ],
+    "images": [
+      "/images/bip/bip-homepage.png",
+      "/images/bip/bip-tutorpage.png",
+      "/images/bip/bip-profilepage.png"
+    ],
+    "description": {
+      "en": "TUTOR_SYSTEM",
+      "nl": "BIJLES_SYSTEEM"
+    },
+    "longDescription": {
+      "en": "In January 2026, I went to Finland - Lahti for a week as exchange. There were 3 schools participating in this project, Finnish, Spanish and a Dutch school. \n\nFor this project you had to work in a team while getting an Sustainable Development Goal. My team got goal number ... - Quality Education. \n\nWe had the idea to make a tutoring system application. With this application you can find a tutor who will fit you or assign yourself to become a tutor.",
+      "nl": "In januari 2026 ging ik een week naar Lahti in Finland voor een uitwisselingsprogramma. Er deden drie scholen mee aan dit project: een Finse, een Spaanse en een Nederlandse school.\n\nVoor dit project moesten we in teamverband werken aan een Duurzame Ontwikkelingsdoelstelling. Mijn team kreeg doelstelling nummer ... - Kwaliteitsonderwijs.\n\nWe hadden het idee om een ​​app voor bijles te ontwikkelen. Met deze app kun je een bijlesgever vinden die bij je past, of je aanmelden als bijlesgever."
+    },
+    "links": {
+      "live": "#",
+      "source": "https://github.com/Zhi-CMGT/BIP-TutorSystem"
+    }
+  }
+]
