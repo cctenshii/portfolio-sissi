@@ -59,7 +59,7 @@ const Contact = ({language = 'en'}) => {
             `Name: ${name}\nEmail: ${email}\n\n${message}`
         );
 
-        const mailtoLink = `mailto:sissiwang2003@email.com?subject=${subject}&body=${body}`;
+        const mailtoLink = `mailto:1092146@hr.nl?subject=${subject}&body=${body}`;
 
         // Try opening email client
         window.location.href = mailtoLink;
