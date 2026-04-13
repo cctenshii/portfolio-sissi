@@ -19,7 +19,7 @@ const ProjectCard = ({project, language, t, onProjectClick}) => {
     return (
         <div
             onClick={() => onProjectClick(project.id)}
-            className="relative group p-4 md:p-8 bg-pixel-moss/5 pixel-card hover:bg-pixel-moss/10 transition-all cursor-crosshair group/card"
+            className="relative group p-4 md:p-8 bg-pixel-moss/5 pixel-card hover:bg-pixel-moss/10 transition-all cursor-crosshair group/card flex flex-col h-full overflow-hidden"
         >
             <div className="absolute top-0 right-0 p-3 md:p-4 flex flex-col items-end gap-2 z-10">
                 <div className="text-[8px] md:text-[10px] text-pixel-gold/40 font-bold uppercase italic tracking-widest font-mono">
@@ -35,7 +35,7 @@ const ProjectCard = ({project, language, t, onProjectClick}) => {
 
             {/* Image Slider Area */}
             <div
-                className="bg-pixel-dark h-48 md:h-72 mb-6 md:mb-8 relative overflow-hidden flex flex-col items-center justify-center border-b-4 border-pixel-moss/20 group/slider">
+                className="bg-pixel-dark h-48 md:h-64 lg:h-72 mb-6 md:mb-8 relative overflow-hidden flex flex-col items-center justify-center border-b-4 border-pixel-moss/20 group/slider shrink-0">
                 {project.images && project.images.length > 0 ? (
                     <>
                         <img
@@ -44,7 +44,7 @@ const ProjectCard = ({project, language, t, onProjectClick}) => {
                             className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 md:grayscale md:group-hover:grayscale-0"
                         />
 
-                        {/* Navigation Arrows (shown on hover or always on mobile) */}
+                        {/* Navigation Arrows */}
                         {project.images.length > 1 && (
                             <div
                                 className="absolute inset-0 flex items-center justify-between px-2 md:px-4 md:opacity-0 md:group-hover/slider:opacity-100 transition-opacity">
@@ -89,20 +89,20 @@ const ProjectCard = ({project, language, t, onProjectClick}) => {
                     className="absolute bottom-0 left-0 w-full h-1 bg-pixel-rose/20 transform -translate-x-full md:group-hover:translate-x-0 transition-transform duration-700"></div>
             </div>
 
-            <div className="space-y-4 md:space-y-6">
+            <div className="space-y-4 md:space-y-6 flex-grow flex flex-col">
                 <div className="flex justify-between items-start gap-4">
-                    <h3 className="text-xl md:text-3xl font-bold tracking-widest text-pixel-gold group-hover/card:text-pixel-rose transition-colors italic underline decoration-pixel-rose/20 underline-offset-4 md:underline-offset-8 uppercase leading-tight">
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-widest text-pixel-gold group-hover/card:text-pixel-rose transition-colors italic underline decoration-pixel-rose/20 underline-offset-4 md:underline-offset-8 uppercase leading-tight break-words max-w-full">
                         {project.title}
                     </h3>
                     <span
-                        className="hidden md:block text-[10px] text-pixel-rose opacity-0 group-hover/card:opacity-100 transition-opacity tracking-[0.2em] font-bold shrink-0">
+                        className="hidden xl:block text-[10px] text-pixel-rose opacity-0 group-hover/card:opacity-100 transition-opacity tracking-[0.2em] font-bold shrink-0">
                         [ {t.viewDetail} ]
                     </span>
                 </div>
-                <p className="text-[10px] md:text-xs tracking-widest text-pixel-moss/60 font-bold opacity-80 uppercase italic line-clamp-3 md:line-clamp-none">
+                <p className="text-[10px] md:text-xs tracking-wider lg:tracking-widest text-pixel-moss/60 font-bold opacity-80 uppercase italic line-clamp-4 md:line-clamp-none break-words">
                     // {project.description[language]}
                 </p>
-                <div className="pt-4 md:pt-8 flex flex-wrap gap-6 md:gap-12 items-center border-t border-pixel-moss/10"
+                <div className="mt-auto pt-4 md:pt-8 flex flex-wrap gap-4 md:gap-8 items-center border-t border-pixel-moss/10"
                      onClick={(e) => e.stopPropagation()}>
                     <a href={project.links.live} target="_blank"
                        className="text-pixel-gold font-bold hover:text-pixel-rose transition-colors text-[10px] md:text-xs tracking-widest uppercase italic">
@@ -153,7 +153,7 @@ const Projects = ({language = 'en', onProjectClick}) => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 relative">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 lg:gap-12 relative">
                     {projects.map((project) => (
                         <ProjectCard
                             key={project.id}

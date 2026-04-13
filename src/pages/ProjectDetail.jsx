@@ -45,7 +45,7 @@ const ProjectDetail = ({ language = 'en', projectId, onBack }) => {
 
                 <div className="grid lg:grid-cols-2 gap-10 md:gap-16">
                     {/* Left Side: Images Gallery */}
-                    <div className="space-y-6 md:space-y-8 order-2 lg:order-1">
+                    <div className="space-y-6 md:space-y-8 order-2 lg:order-1 overflow-hidden">
                         {project.images.map((img, index) => (
                             <div key={index} className="pixel-card border-2 md:border-4 border-pixel-moss/10 overflow-hidden bg-pixel-moss/5">
                                 <img 
@@ -58,18 +58,18 @@ const ProjectDetail = ({ language = 'en', projectId, onBack }) => {
                     </div>
 
                     {/* Right Side: Details */}
-                    <div className="lg:sticky lg:top-32 h-fit space-y-8 md:space-y-12 order-1 lg:order-2">
+                    <div className="lg:sticky lg:top-32 h-fit space-y-8 md:space-y-12 order-1 lg:order-2 min-w-0">
                         <div className="relative">
                             <span className="text-pixel-rose text-[9px] md:text-[10px] tracking-[0.3em] md:tracking-[0.5em] font-bold uppercase mb-2 md:mb-4 block">
                                 ID: {project.id} // {t.status}
                             </span>
-                            <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-widest text-pixel-gold italic underline decoration-pixel-rose/20 underline-offset-4 md:underline-offset-8 leading-tight">
+                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold uppercase tracking-widest text-pixel-gold italic underline decoration-pixel-rose/20 underline-offset-4 md:underline-offset-8 leading-tight break-words">
                                 {project.title}
                             </h2>
                         </div>
 
                         <div className="space-y-6 md:space-y-8 bg-pixel-moss/5 p-6 md:p-10 border-l-4 border-pixel-rose">
-                            <p className="text-lg md:text-xl leading-relaxed text-pixel-cream/80 uppercase italic whitespace-pre-line">
+                            <p className="text-lg md:text-xl leading-relaxed text-pixel-cream/80 uppercase italic whitespace-pre-line break-words">
                                 {project.longDescription[language]}
                             </p>
                         </div>
@@ -81,7 +81,7 @@ const ProjectDetail = ({ language = 'en', projectId, onBack }) => {
                                 </h3>
                                 <div className="flex flex-wrap gap-2 md:gap-4">
                                     {project.technologies.map(tech => (
-                                        <span key={tech} className="px-3 py-1.5 md:px-4 md:py-2 bg-pixel-dark border border-pixel-moss/30 text-pixel-moss text-[9px] md:text-[10px] tracking-widest">
+                                        <span key={tech} className="px-3 py-1.5 md:px-4 md:py-2 bg-pixel-dark border border-pixel-moss/30 text-pixel-moss text-[9px] md:text-[10px] tracking-widest whitespace-nowrap">
                                             {tech}
                                         </span>
                                     ))}
