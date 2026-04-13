@@ -73,11 +73,11 @@ const About = ({language = 'en'}) => {
                             <div className="absolute top-0 left-0 w-full h-2 bg-pixel-gold/20"></div>
                             <div
                                 className="w-full h-full relative overflow-hidden rounded-2xl border-4 border-pixel-moss/20 shadow-inner">
-                                <img
-                                    src={sissiImage}
-                                    alt="Sissi Wang"
-                                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                                />
+                                {/*<img*/}
+                                {/*    src={sissiImage}*/}
+                                {/*    alt="Sissi Wang"*/}
+                                {/*    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"*/}
+                                {/*/>*/}
                             </div>
                         </div>
                     </div>
